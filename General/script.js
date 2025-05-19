@@ -327,16 +327,17 @@ const semaforo = {
 
 console.log(semaforo.rojo); */
 
-const personas = [
+// 🚀 UNIDAD 4 🚀
+/* const personas = [
   { nombre: "Sofía", edad: 28, ciudad: "Buenos Aires" },
   { nombre: "Brandon", edad: 35, ciudad: "Ciudad de México" },
   { nombre: "Valentina", edad: 22, ciudad: "Bogotá" },
   { nombre: "Carlos", edad: 41, ciudad: "Santiago de Chile" },
   { nombre: "Isabella", edad: 29, ciudad: "Montevideo" },
-];
+]; */
 
 //🚀 PUSH 🚀 Añade un elemento al final del array
-personas.push({ nombre: "Ariel", edad: 38, ciudad: "Maldonado" });
+/* personas.push({ nombre: "Ariel", edad: 38, ciudad: "Maldonado" }); */
 
 // 🚀 FILTRAR 🚀
 /* const menorDe30 = personas.filter((personas) => personas.edad < 30);
@@ -373,9 +374,67 @@ console.log(nombresPersonas); */
 // 🚀 INDEXOF 🚀
 /* let nombres = personas.map((persona) => persona.nombre);
 let indice = nombres.indexOf("Valentina");
+console.log(personas);
 console.log(indice); */
 
 //🚀 INCLUDES 🚀
 /* let nombres = personas.map((people) => people.nombre); //Crea un array de nombres de "personas"
 let contiene = nombres.includes("Valentina");
+console.log(personas);
 console.log(contiene); */
+
+// 🚀 LOCALSTORAGE 🚀
+/* localStorage.setItem("usuario", "LewisCouget"); // Guardar datos
+let usuario = localStorage.getItem("usuario"); // Obtener datos
+console.log(usuario); // 'LewisCouget'
+localStorage.removeItem("usuario"); // Eliminar datos */
+
+// CAMBIAR TIPO DE DATO
+/* localStorage.setItem("puntuacion", "10"); // Va a devolver string
+let puntuacion = parseInt(localStorage.getItem("puntuacion")); // Se puede pasar a number
+console.log(puntuacion);
+localStorage.removeItem("puntuacion"); // Elimina datos */
+
+// ALMACENAR DATOS COMPLEJOS (COMO OBJETOS O ARRAYS)
+/* let usuario = {
+  nombre: "Lewis",
+  edad: 26,
+};
+
+localStorage.setItem("usuario", JSON.stringify(usuario));
+
+let usuarioRecuperado = JSON.parse(localStorage.getItem("usuario"));
+console.log(usuarioRecuperado.nombre);
+console.log(usuarioRecuperado.edad);
+localStorage.removeItem("usuario"); */
+
+// OBJETO USUARIO
+/* const usuario = {
+  id: "1234",
+  nombre: "Lewis",
+  correo: "lewis@example.com",
+};
+
+localStorage.setItem("usuario", JSON.stringify(usuario)); // Convertir el objeto usuario a una cadena JSON para almacenamiento
+const usuarioAlmacenamiento = JSON.parse(localStorage.getItem("usuario")); // Recuperar el objeto usuario de localStorage y convertirlo de nuevo a un objeto JavaScript
+console.log(usuarioAlmacenamiento); */
+
+// CARRITO DE COMPRAS JSON
+// Supongamos que este es el carrito de compras del usuario
+/* const carrito = {
+  items: [
+    { id: 1, producto: "Libro", cantidad: 2, precio: 12.0 },
+    { id: 2, producto: "Lápiz", cantidad: 10, precio: 1.5 },
+  ],
+};
+
+localStorage.setItem("carrito", JSON.stringify(carrito)); // Convertimos el objeto carrito en una cadena JSON y lo almacenamos
+const carritoAlmacenado = JSON.parse(localStorage.getItem("carrito")); // Recuperamos la cadena JSON del almacenamiento y la convertimos de nuevo a un objeto JavaScript
+console.log(`Total de productos: ${carritoAlmacenado.items.length}`); // Ahora podemos acceder y manipular los datos del carrito como un objeto JavaScript
+console.log(carritoAlmacenado); */
+
+// 🚀 SESSIONSTORAGE 🚀
+/* sessionStorage.setItem("detalleCompra", "Libro de JavaScript"); // Guardar datos
+let detalle = sessionStorage.getItem("detalleCompra"); // Obtener datos
+console.log(detalle); // 'Libro de JavaScript'
+sessionStorage.removeItem("detalleCompra"); // Eliminar datos al cerrar la pestaña */
