@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gestión de Alumnos</title>
+    <link rel="stylesheet" href="styile.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1 class="saludo">Bienvenido!</h1>
+      <div class="login">
+        <p class="registro-info">
+          Para Registrarse toque el boton
+          <button class="botonRegistrar">Registrarse</button>
+        </p>
+      </div>
+
+      <div class="gestion-alumnos" style="display: none">
+        <h2>Lista de Alumnos</h2>
+        <div class="acciones-alumnos">
+          <button class="btn-agregar-alumno">Agregar Alumno</button>
+          <button class="btn-eliminar-alumno">Eliminar Último Alumno</button>
+        </div>
+        <ul class="lista-alumnos"></ul>
+      </div>
+
+      <div class="seccion-promedios" style="display: none">
+        <h2>Análisis de Notas</h2>
+        <p class="promedio-general">
+          Promedio General de Notas:
+          <span id="valor-promedio-general">N/A</span>
+        </p>
+        <h3>Categorías de Alumnos:</h3>
+        <ul class="lista-promedios"></ul>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>

@@ -384,6 +384,24 @@ console.log(personas);
 console.log(contiene); */
 
 // 🚀 LOCALSTORAGE 🚀
+
+// FUNCION SALUDAR
+/* function saludar() {
+  const nombreGuardado = localStorage.getItem("nombre");
+  if (nombreGuardado) {
+    console.log(`Bienvenido nuevamente ${nombreGuardado}!`);
+  } else {
+    const nombre = prompt("Cual es tu nombre?");
+    if (nombre) {
+      localStorage.setItem("nombre", nombre);
+      console.log(`Hola ${nombre}! Registrado!`);
+    } else {
+      console.log("Bienvenido a nuestro sitio web!");
+    }
+  }
+}
+saludar(); */
+
 /* localStorage.setItem("usuario", "LewisCouget"); // Guardar datos
 let usuario = localStorage.getItem("usuario"); // Obtener datos
 console.log(usuario); // 'LewisCouget'
@@ -406,6 +424,7 @@ localStorage.setItem("usuario", JSON.stringify(usuario));
 let usuarioRecuperado = JSON.parse(localStorage.getItem("usuario"));
 console.log(usuarioRecuperado.nombre);
 console.log(usuarioRecuperado.edad);
+console.log(usuarioRecuperado);
 localStorage.removeItem("usuario"); */
 
 // OBJETO USUARIO
@@ -425,6 +444,7 @@ console.log(usuarioAlmacenamiento); */
   items: [
     { id: 1, producto: "Libro", cantidad: 2, precio: 12.0 },
     { id: 2, producto: "Lápiz", cantidad: 10, precio: 1.5 },
+    { id: 3, producto: "Goma", cantidad: 16, precio: 2.8 },
   ],
 };
 
@@ -433,8 +453,52 @@ const carritoAlmacenado = JSON.parse(localStorage.getItem("carrito")); // Recupe
 console.log(`Total de productos: ${carritoAlmacenado.items.length}`); // Ahora podemos acceder y manipular los datos del carrito como un objeto JavaScript
 console.log(carritoAlmacenado); */
 
+// PRODUCTOS
+
+/* const prodCelulares = [
+  { nombre: "Samsung", precio: 50000 },
+  { nombre: "Nokia", precio: 70000 },
+  { nombre: "Motorola", precio: 90000 },
+  { nombre: "Xiaomi", precio: 54000 },
+];
+
+localStorage.setItem("listaProductos", JSON.stringify(prodCelulares));
+
+class Producto {
+  constructor(objeto) {
+    this.nombre = objeto.nombre;
+    this.precio = objeto.precio;
+  }
+
+  sumarIva() {
+    return (this.precio = this.precio * 1.21);
+  }
+
+  nombreCel() {
+    return this.nombre;
+  }
+}
+
+const almacenados = JSON.parse(localStorage.getItem("listaProductos"));
+
+const productos = [];
+
+for (const objeto of almacenados) {
+  productos.push(new Producto(objeto));
+}
+
+for (const celular of productos) {
+  console.log(celular.nombreCel());
+  console.log(celular.sumarIva());
+  console.log("----------------------");
+} */
+
 // 🚀 SESSIONSTORAGE 🚀
 /* sessionStorage.setItem("detalleCompra", "Libro de JavaScript"); // Guardar datos
 let detalle = sessionStorage.getItem("detalleCompra"); // Obtener datos
 console.log(detalle); // 'Libro de JavaScript'
 sessionStorage.removeItem("detalleCompra"); // Eliminar datos al cerrar la pestaña */
+
+// 🚀 ACRIVIDAD PRACTICA 5.5 🚀
+
+//Profe podria explicar lo que comento hace un rato de tener otro html para ir a un carrito con datos guardados en storage
